@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Futuristic Dark Theme - Primary */
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Purple-Pink Gradient Primary */
+    --primary: 250 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 80% 70%;
+
+    /* Cyber Cyan Accent */
+    --secondary: 190 95% 58%;
+    --secondary-foreground: 240 10% 4%;
+
+    --muted: 240 8% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 190 95% 58%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 15%;
+    --input: 240 8% 15%;
+    --ring: 250 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250, 70%, 60%), hsl(280, 80%, 70%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(250, 70%, 60% / 0.3), transparent 70%);
+    --gradient-card: linear-gradient(135deg, hsl(240, 8%, 10%), hsl(240, 8%, 8%));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(250, 70%, 60% / 0.4);
+    --shadow-card: 0 4px 20px hsl(240, 10%, 4% / 0.6);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[hsl(250,70%,60%)] to-[hsl(280,80%,70%)] bg-clip-text text-transparent;
+  }
+  
+  .glow {
+    text-shadow: 0 0 20px hsl(250, 70%, 60% / 0.5);
+  }
+  
+  .card-glow {
+    box-shadow: 0 0 30px hsl(250, 70%, 60% / 0.2);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
