@@ -1,383 +1,166 @@
-# 🌐 Sohaib Rizwan — Frontend Developer Portfolio
+# Sohaib Rizwan — Frontend Developer Portfolio
 
-A modern personal portfolio and landing site built with Vite, React (v18), TypeScript, and Tailwind CSS. It showcases projects, skills, and a contact form backed by a Supabase Edge Function and Resend for secure email delivery.
+A modern portfolio and landing site built using **Vite**, **React 18**, **TypeScript**, and **Tailwind CSS**.  
+Includes a contact form powered by **Supabase Edge Functions** and **Resend** for secure email delivery.
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-green.svg)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-purple.svg)](https://tailwindcss.com/)
 
-## 🚀 Live demo
+## 🚀 Live Demo
 
-Replace with your production URL:
+You can view the live project here: [https://your-production-link-here.com](https://your-production-link-here.com)
 
-[https://your-deployed-site.vercel.app](https://your-deployed-site.vercel.app)
+<details>
+<summary>📹 Demo Video (Click to Expand)</summary>
 
----
+*(Insert a short GIF or video embed here for interactivity – e.g., upload a demo animation to GitHub and link it:)*  
+![Portfolio Demo](demo.gif)  
+*Smooth scrolling, form submission, and dark mode toggle in action.*
 
-## 🧠 About
+</details>
 
-This portfolio demonstrates frontend development work with an emphasis on performance, accessibility, and modern design patterns. The codebase is modular and ready to extend.
+## 🧠 Overview
 
----
+This project highlights modern frontend engineering principles with a focus on:
+
+- **Performance & accessibility**
+- **Clean, scalable component architecture**
+- **Beautiful UI with smooth UX interactions**
+- **Secure form submission workflow**
 
 ## ✨ Features
 
-- Vite + React + TypeScript development stack
-- Tailwind CSS for utility-first styling
-- Contact form using a Supabase Edge Function + Resend for email delivery
-- Reusable components and a clean folder structure
-- Fully responsive layout
-- SEO-friendly markup and metadata
+<details>
+<summary>Click to see detailed features</summary>
 
----
+| Feature | Description |
+|---------|-------------|
+| ⚡ **Fast Dev Environment** | Vite + React + TypeScript for lightning-fast builds and hot reloads. |
+| 🎨 **Styling** | Tailwind CSS + optional Framer Motion for animations (e.g., hover effects, transitions). |
+| 📩 **Contact Form** | Supabase Edge Function + Resend for spam-proof email delivery with validation. |
+| ♻️ **Architecture** | Reusable components + modular structure for easy maintenance. |
+| 📱 **Design** | Fully responsive across devices (mobile-first approach). |
+| 🔍 **SEO** | Optimized metadata, Open Graph tags, and sitemap-ready. |
+| 🌙 **UI** | Optional dark-mode support with CSS variables and localStorage persistence. |
+| 🚀 **Deployment** | Pre-configured for Vercel/Netlify with CI/CD hooks. |
 
-## 🛠️ Tech stack
+</details>
 
-- React 18 (see `package.json`)
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion (optional)
+## 🛠️ Tech Stack
 
----
+- **Frontend**: React 18, TypeScript, Vite, Tailwind CSS, Framer Motion (optional)
+- **Backend / Email**: Supabase Edge Functions (Node + TS), Resend API
+- **Deployment**: Vercel / Netlify
 
-## 📂 Project structure
-
-Minimal overview:
+## 📂 Project Structure
 
 ```
 my-portfolio/
 ├─ public/
+│  ├─ images/
+│  └─ favicon.ico
 ├─ src/
 │  ├─ components/
-│  ├─ hooks/
-│  ├─ pages/
-│  ├─ lib/
-│  ├─ index.css
-│  └─ main.tsx
+│  │  ├─ ui/          # Reusable UI elements (Button, Card, etc.)
+│  │  └─ layout/      # Header, Footer, etc.
+│  ├─ hooks/          # Custom hooks (useForm, useTheme)
+│  ├─ pages/          # Page components (Home, About, Contact)
+│  ├─ lib/            # Utilities (supabase client, validation)
+│  ├─ index.css       # Global styles
+│  └─ main.tsx        # Entry point
 ├─ supabase/
+│  └─ functions/
+│     └─ sendEmail/   # Edge function for emails
 ├─ .env.example
 ├─ package.json
 └─ README.md
 ```
 
----
+## ⚙️ Getting Started
 
-## ⚙️ Getting started
+<details>
+<summary>Step-by-step setup (Click to Expand)</summary>
 
-1. Clone
+### 1️⃣ Clone Repo
 
-```powershell
+```bash
 git clone https://github.com/sohaibrizwan-dev/my-portfolio.git
 cd my-portfolio
 ```
 
-2. Install
+### 2️⃣ Install Packages
 
-```powershell
+```bash
 npm install
 ```
 
-3. Create `.env` from `.env.example` and set Resend / Supabase keys
+### 3️⃣ Environment Setup
 
-4. Run
+Create a `.env` file from `.env.example` and add your keys:
 
-```powershell
-npm run dev
-```
-
----
-
-## 🧾 Supabase Edge Function
-
-Endpoint (example): `/functions/v1/send-email`
-
-Request example:
-
-```json
-{
-  "name": "Jane",
-  "email": "jane@example.com",
-  "message": "Hi Sohaib!"
-}
-```
-
----
-
-## 👤 Author
-
-Sohaib Rizwan — Frontend Developer
-
-- GitHub: https://github.com/sohaibrizwan-dev
-- LinkedIn: https://linkedin.com/in/sohaibrizwan-dev
-
----
-
-## License
-
-MIT
-# 🌐 Sohaib Rizwan — Frontend Developer Portfolio
-
-A modern personal portfolio and landing site built with Vite, React, TypeScript, and Tailwind CSS. It showcases projects, skills, and a contact form backed by a Supabase Edge Function and Resend for secure email delivery.
-
----
-
-## 🚀 Live demo
-
-View the deployed site (replace with your production URL):
-
-[https://your-deployed-site.vercel.app](https://your-deployed-site.vercel.app)
-
----
-
-## 🧠 About
-
-This portfolio demonstrates frontend development work with an emphasis on performance, accessibility, and modern design patterns. The codebase is modular and ready to extend.
-
----
-
-## ✨ Features
-
-- Blazing-fast dev experience with Vite + React + TypeScript
-- Tailwind CSS for utility-first styling
-- Contact form using a Supabase Edge Function + Resend for email delivery
-- Reusable components and a clean folder structure
-- Fully responsive layout
-- SEO-friendly markup and meta tags
-- Dark mode support (if enabled)
-- Ready for deployment on Vercel or Netlify
-
----
-
-## 🛠️ Tech stack
-
-**Frontend**
-
-- React 18 (see `package.json`) — UI
-- TypeScript — types and tooling
-- Vite — bundler and dev server
-- Tailwind CSS — styling
-- Framer Motion — optional animations
-
-**Backend / API**
-
-- Supabase Edge Function (Node.js + TypeScript)
-- Resend (email delivery)
-
-**Deployment**
-
-- Vercel / Netlify
-- Optional: GitHub Actions for CI/CD
-
----
-
-## 📂 Project structure (overview)
-
-my-portfolio/
-
-- public/ — static assets
-- src/
-  - components/ — UI components
-  - hooks/ — custom hooks
-  - pages/ — top-level pages / sections
-  - lib/ — utilities and API helpers
-  - index.css — Tailwind entry
-  - main.tsx — app entry
-- supabase/ — edge function(s)
-- .env.example — example environment variables
-- package.json
-- README.md
-
----
-
-## ⚙️ Getting started
-
-1. Clone the repo
-
-```powershell
-git clone https://github.com/sohaibrizwan-dev/my-portfolio.git
-cd my-portfolio
-```
-
-2. Install dependencies
-
-```powershell
-npm install
-```
-
-3. Create environment variables
-
-Copy `.env.example` to `.env` and set values:
-
-```text
+```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 RESEND_API_KEY=your_resend_api_key
 ```
 
-4. Run the dev server
+*Pro Tip: Get free keys from [Supabase](https://supabase.com) and [Resend](https://resend.com).*
 
-```powershell
+### 4️⃣ Run Dev Server
+
+```bash
 npm run dev
 ```
 
-5. Build for production
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser. The page will reload if you make edits.
 
-```powershell
+### 5️⃣ Build Production Bundle
+
+```bash
 npm run build
 ```
 
----
+Builds the app for production to the `dist` folder. For deployment:
 
-## 🧾 Supabase Edge Function — Email sender
+- **Vercel**: `npm i -g vercel && vercel`
+- **Netlify**: Drag `dist` to Netlify dashboard.
 
-# 🌐 Sohaib Rizwan — Frontend Developer Portfolio
+</details>
 
-A modern personal portfolio and landing site built with Vite, React, TypeScript, and Tailwind CSS. It showcases projects, skills, and a contact form backed by a Supabase Edge Function and Resend for secure email delivery.
+## 🧾 Email Function — Supabase Edge
 
----
-
-## 🚀 Live demo
-
-View the deployed site (replace with your production URL):
-
-[https://your-deployed-site.vercel.app](https://your-deployed-site.vercel.app)
-
----
-
-## 🧠 About
-
-This portfolio demonstrates frontend development work with an emphasis on performance, accessibility, and modern design patterns. The codebase is modular and ready to extend.
-
----
-
-## ✨ Features
-
-- Blazing-fast dev experience with Vite + React + TypeScript
-- Tailwind CSS for utility-first styling
-- Contact form using a Supabase Edge Function + Resend for email delivery
-- Reusable components and a clean folder structure
-- Fully responsive layout
-- SEO-friendly markup and meta tags
-- Dark mode support (if enabled)
-- Ready for deployment on Vercel or Netlify
-
----
-
-## 🛠️ Tech stack
-
-**Frontend**
-
-- React 18 (see `package.json`) — UI
-- TypeScript — types and tooling
-- Vite — bundler and dev server
-- Tailwind CSS — styling
-- Framer Motion — optional animations
-
-**Backend / API**
-
-- Supabase Edge Function (Node.js + TypeScript)
-- Resend (email delivery)
-
-**Deployment**
-
-- Vercel / Netlify
-- Optional: GitHub Actions for CI/CD
-
----
-
-## 📂 Project structure (overview)
-
-my-portfolio/
-
-- public/ — static assets
-- src/
-  - components/ — UI components
-  - hooks/ — custom hooks
-  - pages/ — top-level pages / sections
-  - lib/ — utilities and API helpers
-  - index.css — Tailwind entry
-  - main.tsx — app entry
-- supabase/ — edge function(s)
-- .env.example — example environment variables
-- package.json
-- README.md
-
----
-
-## ⚙️ Getting started
-
-1. Clone the repo
-
-```powershell
-git clone https://github.com/sohaibrizwan-dev/my-portfolio.git
-cd my-portfolio
-```
-
-2. Install dependencies
-
-```powershell
-npm install
-```
-
-3. Create environment variables
-
-Copy `.env.example` to `.env` and set values:
-
-```text
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-RESEND_API_KEY=your_resend_api_key
-```
-
-4. Run the dev server
-
-```powershell
-npm run dev
-```
-
-5. Build for production
-
-```powershell
-npm run build
-```
-
----
-
-## 🧾 Supabase Edge Function — Email sender
-
-The repository includes a Supabase Edge Function that handles contact form submissions and sends emails via Resend.
-
-Endpoint (local / deployed):
-
-```
-/functions/v1/send-email
-```
-
-Request example (JSON):
+- **Endpoint**: `/functions/v1/send-email`
+- **Backend Code**: `supabase/functions/sendEmail/index.ts`
+- **Example Payload**:
 
 ```json
 {
   "name": "John Doe",
   "email": "john@example.com",
-  "message": "Hey Sohaib! I loved your portfolio."
+  "message": "Hi Sohaib! Great portfolio 😊"
 }
 ```
 
-Check `supabase/functions/sendEmail/index.ts` for implementation details and required env vars.
-
----
+*Test it interactively: Use tools like Postman or the Supabase dashboard to invoke the function.*
 
 ## 👤 Author
 
-Sohaib Rizwan — Frontend Developer | Full-Stack Learner | AI & Cybersecurity Enthusiast
+**Sohaib Rizwan**  
+Frontend Developer | Full-Stack Aspirant | AI & Cybersecurity Learner
 
-- Portfolio: https://your-deployed-site.vercel.app
-- GitHub: https://github.com/sohaibrizwan-dev
-- LinkedIn: https://linkedin.com/in/sohaibrizwan-dev
-- Contact: your.email@example.com
-
----
+- Portfolio: [https://your-production-link-here.com](https://your-production-link-here.com)
+- GitHub: [https://github.com/sohaibrizwan-dev](https://github.com/sohaibrizwan-dev)
+- LinkedIn: [https://linkedin.com/in/sohaibrizwan-dev](https://linkedin.com/in/sohaibrizwan-dev)
+- Email: [your.personal.email@example.com](mailto:your.personal.email@example.com)
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details (or add one if missing).
-3. Create environment variables
+Licensed under the [MIT License](LICENSE).  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+*⭐ Star this repo if it helps you! Contributions welcome via pull requests.*  
+*Built with ❤️ using modern web tools.*
