@@ -46,11 +46,9 @@ const Contact = () => {
         throw new Error("Failed to save message to database");
       }
 
-      // Optional: Send Email via Edge Function
-      // Uncomment when Edge Function is deployed
-      /*
+      // Send Email via Edge Function
       try {
-        const { data: emailData, error: emailError } = await supabase.functions.invoke('sendEmail', {
+        const { data: emailData, error: emailError } = await supabase.functions.invoke('contact', {
           body: {
             name: formData.name,
             email: formData.email,
@@ -66,7 +64,6 @@ const Contact = () => {
       } catch (emailErr) {
         console.error("Email sending failed:", emailErr);
       }
-      */
 
       setIsSuccess(true);
       toast({
@@ -93,7 +90,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-card via-background to-background" />
-      
+
       {/* Animated Background Elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
